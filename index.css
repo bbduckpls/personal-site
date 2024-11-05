@@ -4,19 +4,19 @@
     --orange: #ED6400;
     --white: #FEFEFE;
     --black: #191919;
-    --gray: #252525;
+    --gray: #37352F;
 }
 
 body {
     font-family: "Open Sans", sans-serif;
     text-align: center;
-    background-color: var(--black);
+    background-color: var(--white);
     margin: 0;
 }
 
 main {
     margin: 0 20px;
-    padding-top: 20px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,6 +60,10 @@ img {
     border-radius: 6px;
 }
 
+.project img:hover {
+    box-shadow: 0 0 4px var(--gray);
+}
+
 #logo {
     margin-top: 50px;
     width: 100px;
@@ -74,6 +78,15 @@ header {
     position: fixed;
     width: 100%;
     margin: 0;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(var(--black), var(--gray));
+    filter: blur(5px);
+    z-index: -1;
 }
 
 nav ul {
@@ -121,8 +134,10 @@ section {
 }
 
 .project {
-    margin: 10px 0;
+    margin: 20px 0;
     max-width: 750px;
+    border: 2px solid var(--gray);
+    box-shadow: 0 0 var(--black);
 }
 
 .tag {
