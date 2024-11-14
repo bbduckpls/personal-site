@@ -1,3 +1,4 @@
+/* all colors */
 :root {
     --brown: #552F13;
     --yellow: #FFD335;
@@ -6,6 +7,8 @@
     --black: #191919;
     --gray: #37352F;
 }
+
+/* GENERAL */
 
 body {
     font-family: "Open Sans", sans-serif;
@@ -16,31 +19,33 @@ body {
 
 main {
     margin: 0 20px;
-    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+h1,
+h2,
+h3 {
+    font-family: "Gaegu", sans-serif;
+    margin: 0;
+}
+
 h1 {
     margin: 5px 0px 0px 0px;
-    font-family: "Gaegu", sans-serif;
-    font-size: 3rem;
+    font-size: 4rem;
     color: var(--yellow);
 }
 
 h2 {
-    font-family: "Gaegu", sans-serif;
-    text-align: left;
-    color: var(--white);
-    font-size: 2rem;
+    font-weight: 600;
+    color: var(--brown);
+    font-size: 3rem;
 }
 
 h3 {
-    font-family: "Gaegu", sans-serif;
     color: var(--yellow);
-    margin: 0;
     padding-bottom: 15px;
     font-size: 1.5rem;
 }
@@ -60,18 +65,24 @@ img {
     border-radius: 6px;
 }
 
-.project img:hover {
-    box-shadow: 0 0 4px var(--gray);
+button {
+    border: none;
+    border-radius: 8px;
+    background-color: var(--yellow);
+    color: var(--white);
+    padding: 7px 14px;
+    font-size: 2rem;
+    margin: 10px 0;
+    font-family: "Gaegu", sans-serif;
 }
 
-#logo {
-    margin-top: 50px;
-    width: 100px;
+button:hover,
+button:active {
+    background-color: var(--orange);
+    cursor: pointer;
 }
 
-#logo:hover {
-    transform: scale(1.1);
-}
+/* HEADER */
 
 header {
     background: var(--black);
@@ -89,6 +100,8 @@ header::before {
     z-index: -1;
 }
 
+/* nav */
+
 nav ul {
     list-style: none;
     display: flex;
@@ -102,25 +115,7 @@ nav li {
     padding: 15px;
 }
 
-button {
-    border: none;
-    border-radius: 8px;
-    background-color: var(--yellow);
-    color: var(--white);
-    padding: 7px 14px;
-    font-size: 2rem;
-    margin: 10px 0;
-    font-family: "Gaegu", sans-serif;
-}
-
-button:hover {
-    background-color: var(--orange);
-    cursor: pointer;
-}
-
-.project button {
-    font-size: 1.5rem;
-}
+/* SECTIONS */
 
 section {
     padding: 20px;
@@ -128,16 +123,65 @@ section {
     border-radius: 12px;
 }
 
+/* hero section */
+
 #hero {
     width: 100%;
     border-radius: 0;
+    margin: 100px 0;
+}
+
+#logo {
+    margin-top: 50px;
+    width: 100px;
+}
+
+#logo:hover,
+#logo:active,
+#hero p a:hover,
+#hero p a:active,
+h1:hover,
+h1:active {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
+#hero p a {
+    display: block;
+    font-family: "Gaegu", sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--brown);
+    padding: 20px 0;
+}
+
+#hero button {
+    margin: 30px 0;
+}
+
+
+/* project sections */
+
+#ux-ui,
+#frontend {
+    margin-bottom: 80px;
 }
 
 .project {
-    margin: 20px 0;
+    margin: 50px 0;
     max-width: 750px;
-    border: 2px solid var(--gray);
+    border: 2px solid var(--brown);
     box-shadow: 0 0 var(--black);
+}
+
+.project button {
+    font-size: 1.5rem;
+}
+
+.project img:hover,
+.project img:active {
+    box-shadow: 0 0 4px var(--gray);
+    transition-duration: 0.5s;
 }
 
 .tag {
