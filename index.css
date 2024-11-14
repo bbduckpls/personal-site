@@ -45,7 +45,7 @@ h2 {
 }
 
 h3 {
-    color: var(--yellow);
+    color: var(--brown);
     padding-bottom: 15px;
     font-size: 1.5rem;
 }
@@ -196,7 +196,7 @@ h1:active {
 .tag li {
     padding: 5px 10px;
     margin: 0px 5px;
-    background: var(--gray);
+    background: var(--orange);
     border-radius: 8px;
     font-size: 0.75rem;
     color: var(--white)
